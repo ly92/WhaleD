@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Pgb-lM-I7L">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="QtE-SV-fdB">
+            <objects>
+                <navigationController id="Pgb-lM-I7L" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="9xr-8y-Qa7">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="UhN-lC-tLH" kind="relationship" relationship="rootViewController" id="Y5t-kW-KrI"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9x8-FT-Tdk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-601" y="120"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Jqg-Fl-3Iz">
+            <objects>
+                <viewController id="UhN-lC-tLH" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cZt-Qa-fov"/>
+                        <viewControllerLayoutGuide type="bottom" id="2YG-3c-cms"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="z6A-3d-QcH">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x4z-10-4Es">
+                                <rect key="frame" x="0.0" y="94" width="375" height="30"/>
+                                <color key="backgroundColor" red="0.34001991040000001" green="1" blue="0.1631161223" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="joz-Fw-gNR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <state key="normal" title="默认全国，收款通道包含北苑地方饭票"/>
+                                <connections>
+                                    <action selector="payAction3" destination="UhN-lC-tLH" eventType="touchUpInside" id="xaz-HI-piw"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YqX-6v-gaS">
+                                <rect key="frame" x="0.0" y="30" width="375" height="30"/>
+                                <color key="backgroundColor" red="0.34001991040000001" green="1" blue="0.1631161223" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="pMT-QO-yyD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <state key="normal" title="默认地方，收款通道包含北苑地方饭票"/>
+                                <connections>
+                                    <action selector="payAction1" destination="UhN-lC-tLH" eventType="touchUpInside" id="cWI-K4-UHR"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q81-fX-cqP">
+                                <rect key="frame" x="0.0" y="62" width="375" height="30"/>
+                                <color key="backgroundColor" red="0.34001991040000001" green="1" blue="0.1631161223" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="prG-ry-axK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <state key="normal" title="默认地方，收款通道不包含北苑地方饭票"/>
+                                <connections>
+                                    <action selector="payAction2" destination="UhN-lC-tLH" eventType="touchUpInside" id="Qda-y2-nwY"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gzb-ay-nfo">
+                                <rect key="frame" x="0.0" y="126" width="375" height="30"/>
+                                <color key="backgroundColor" red="0.34001991040000001" green="1" blue="0.1631161223" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="EJA-NV-RiZ"/>
+                                </constraints>
+                                <state key="normal" title="默认全国，收款通道包不含北苑地方饭票"/>
+                                <connections>
+                                    <action selector="payAction4" destination="UhN-lC-tLH" eventType="touchUpInside" id="wmU-XB-pdA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qza-WE-hdc">
+                                <rect key="frame" x="0.0" y="158" width="375" height="30"/>
+                                <color key="backgroundColor" red="0.34001991040000001" green="1" blue="0.1631161223" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Bwx-Un-xmg"/>
+                                </constraints>
+                                <state key="normal" title="默认第三方，收款通道包含北苑地方饭票"/>
+                                <connections>
+                                    <action selector="payAction5" destination="UhN-lC-tLH" eventType="touchUpInside" id="dUq-It-qEK"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j1H-Oj-gft">
+                                <rect key="frame" x="0.0" y="190" width="375" height="30"/>
+                                <color key="backgroundColor" red="0.34001991040000001" green="1" blue="0.1631161223" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="VX8-Qc-JCG"/>
+                                </constraints>
+                                <state key="normal" title="默认第三方，收款通道包不含北苑地方饭票"/>
+                                <connections>
+                                    <action selector="payAction6" destination="UhN-lC-tLH" eventType="touchUpInside" id="whr-ao-GeG"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="co8-9k-4pl">
+                                <rect key="frame" x="0.0" y="222" width="375" height="30"/>
+                                <color key="backgroundColor" red="0.34001991040000001" green="1" blue="0.1631161223" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="3NY-by-T3X"/>
+                                </constraints>
+                                <state key="normal" title="无默认"/>
+                                <connections>
+                                    <action selector="payAction7" destination="UhN-lC-tLH" eventType="touchUpInside" id="LwK-yG-1HU"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TW0-W9-ZuW">
+                                <rect key="frame" x="0.0" y="254" width="375" height="30"/>
+                                <color key="backgroundColor" red="0.34001991040000001" green="1" blue="0.1631161223" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="m2N-Ey-9Ld"/>
+                                </constraints>
+                                <state key="normal" title="全部默认"/>
+                                <connections>
+                                    <action selector="payAction8" destination="UhN-lC-tLH" eventType="touchUpInside" id="V75-Je-5hS"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IZP-Lg-eEu">
+                                <rect key="frame" x="0.0" y="286" width="375" height="30"/>
+                                <color key="backgroundColor" red="0.34001991040000001" green="1" blue="0.1631161223" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Pmw-r7-e3o"/>
+                                </constraints>
+                                <state key="normal" title="邻花钱"/>
+                                <connections>
+                                    <action selector="payAction9" destination="UhN-lC-tLH" eventType="touchUpInside" id="Wic-Se-yOQ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="j1H-Oj-gft" firstAttribute="top" secondItem="Qza-WE-hdc" secondAttribute="bottom" constant="2" id="0sC-Kk-KLq"/>
+                            <constraint firstItem="Qza-WE-hdc" firstAttribute="leading" secondItem="z6A-3d-QcH" secondAttribute="leading" id="1sb-bo-3Au"/>
+                            <constraint firstAttribute="trailing" secondItem="IZP-Lg-eEu" secondAttribute="trailing" id="4t2-AT-5iz"/>
+                            <constraint firstAttribute="trailing" secondItem="co8-9k-4pl" secondAttribute="trailing" id="7CO-X9-VSn"/>
+                            <constraint firstAttribute="trailing" secondItem="Qza-WE-hdc" secondAttribute="trailing" id="Cjg-LJ-LyF"/>
+                            <constraint firstItem="IZP-Lg-eEu" firstAttribute="top" secondItem="TW0-W9-ZuW" secondAttribute="bottom" constant="2" id="Ggv-V8-EfE"/>
+                            <constraint firstItem="co8-9k-4pl" firstAttribute="leading" secondItem="z6A-3d-QcH" secondAttribute="leading" id="LIq-hJ-gHS"/>
+                            <constraint firstItem="gzb-ay-nfo" firstAttribute="top" secondItem="x4z-10-4Es" secondAttribute="bottom" constant="2" id="Qlm-0P-vbs"/>
+                            <constraint firstItem="TW0-W9-ZuW" firstAttribute="top" secondItem="co8-9k-4pl" secondAttribute="bottom" constant="2" id="R1e-PG-zLg"/>
+                            <constraint firstItem="q81-fX-cqP" firstAttribute="top" secondItem="YqX-6v-gaS" secondAttribute="bottom" constant="2" id="VJe-df-dQj"/>
+                            <constraint firstAttribute="trailing" secondItem="x4z-10-4Es" secondAttribute="trailing" id="YFg-VL-T3D"/>
+                            <constraint firstItem="IZP-Lg-eEu" firstAttribute="leading" secondItem="z6A-3d-QcH" secondAttribute="leading" id="i0p-1p-Sgc"/>
+                            <constraint firstItem="x4z-10-4Es" firstAttribute="top" secondItem="q81-fX-cqP" secondAttribute="bottom" constant="2" id="iEX-l8-M2S"/>
+                            <constraint firstItem="co8-9k-4pl" firstAttribute="top" secondItem="j1H-Oj-gft" secondAttribute="bottom" constant="2" id="lIb-cF-ANp"/>
+                            <constraint firstAttribute="trailing" secondItem="YqX-6v-gaS" secondAttribute="trailing" id="maN-bh-VBy"/>
+                            <constraint firstAttribute="trailing" secondItem="j1H-Oj-gft" secondAttribute="trailing" id="ntt-LG-Mg1"/>
+                            <constraint firstAttribute="trailing" secondItem="gzb-ay-nfo" secondAttribute="trailing" id="o7t-kn-mfn"/>
+                            <constraint firstItem="Qza-WE-hdc" firstAttribute="top" secondItem="gzb-ay-nfo" secondAttribute="bottom" constant="2" id="p5O-eg-Du4"/>
+                            <constraint firstItem="q81-fX-cqP" firstAttribute="leading" secondItem="z6A-3d-QcH" secondAttribute="leading" id="pFX-qG-dlM"/>
+                            <constraint firstAttribute="trailing" secondItem="TW0-W9-ZuW" secondAttribute="trailing" id="rcf-kY-g5d"/>
+                            <constraint firstItem="YqX-6v-gaS" firstAttribute="leading" secondItem="z6A-3d-QcH" secondAttribute="leading" id="sFQ-Vf-awp"/>
+                            <constraint firstItem="j1H-Oj-gft" firstAttribute="leading" secondItem="z6A-3d-QcH" secondAttribute="leading" id="tUF-Lo-Keg"/>
+                            <constraint firstItem="gzb-ay-nfo" firstAttribute="leading" secondItem="z6A-3d-QcH" secondAttribute="leading" id="uBC-Sv-zpd"/>
+                            <constraint firstItem="YqX-6v-gaS" firstAttribute="top" secondItem="cZt-Qa-fov" secondAttribute="bottom" constant="10" id="vA7-Va-am9"/>
+                            <constraint firstItem="x4z-10-4Es" firstAttribute="leading" secondItem="z6A-3d-QcH" secondAttribute="leading" id="wLQ-uE-Ber"/>
+                            <constraint firstAttribute="trailing" secondItem="q81-fX-cqP" secondAttribute="trailing" id="x95-jV-1WG"/>
+                            <constraint firstItem="TW0-W9-ZuW" firstAttribute="leading" secondItem="z6A-3d-QcH" secondAttribute="leading" id="xeI-9I-ix2"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="QCh-bX-YqM"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="T8D-Cr-phj" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="504.80000000000001" y="165.06746626686657"/>
+        </scene>
+    </scenes>
+</document>
