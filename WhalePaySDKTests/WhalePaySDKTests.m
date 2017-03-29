@@ -52,20 +52,22 @@
 
 - (void)testSetAppId{
     
+    [self.VC setAppId:@{
+                        @"appkey" : @"5ew28qukblY8r6n9P3BG",
+                        @"appsecret" : @"NmU7hSSADNN9rKB0AwLbi9K9GyIW2K2f",
+                        @"wxAppid" : WECHAT_PAY_KEY,
+                        @"aliSchemel" : ALI_PAY_SCHEMEL
+                        }];
     
-    id mockClass = OCMClassMock([WhalePayViewController class]);
+    id mockClass = OCMClassMock([WPOrder class]);
     
     
-//    [self.VC createPayment:mockClass viewController:nil withCompletion:^(NSDictionary *result) {
-//        
-//    }];
     
-//    [self.VC setAppId:@{
-//                        @"appkey" : @"5ew28qukblY8r6n9P3BG",
-//                        @"appsecret" : @"NmU7hSSADNN9rKB0AwLbi9K9GyIW2K2f",
-//                        @"wxAppid" : WECHAT_PAY_KEY,
-//                        @"aliSchemel" : ALI_PAY_SCHEMEL
-//                        }];
+    [self.VC createPayment:mockClass viewController:nil withCompletion:^(NSDictionary *result) {
+        
+    }];
+    
+    
 }
 
 
