@@ -19,9 +19,7 @@
 @property (strong, nonatomic) ViewController *VC;//
 @end
 
-@interface WhalePayViewController (WhaleTest)
 
-@end
 
 @implementation WhalePaySDKTests
 

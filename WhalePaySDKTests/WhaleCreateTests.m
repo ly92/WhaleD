@@ -16,6 +16,12 @@
 @property (strong, nonatomic) WhalePayViewController *WhaleVC;//
 @property (strong, nonatomic) ViewController *VC;//
 @end
+
+@interface WhalePayViewController (WhaleTest)
+- (void)getPreparePayOrderPayWay;
+@end
+
+
 @implementation WhaleCreateTests
 - (void)setUp {
     [super setUp];
@@ -51,12 +57,8 @@
 - (void)testCreatePaymentDone{
     WPOrder *wpOrder = [[WPOrder alloc] init];
     
-    //    akOrder.appkey = @"5ew28qukblY8r6n9P3BG";
-    //    akOrder.appsecret = @"NmU7hSSADNN9rKB0AwLbi9K9GyIW2K2f";
-    
     wpOrder.pno = @"5e6d164b24be4d748fde32d814b17171";
     wpOrder.cno = @"cf43a400aabf49dba4e2c62a5fe29f07";
-    wpOrder.orderno = @"123123123";
     wpOrder.content = @"机械键盘";
     wpOrder.userId = @"233";
     wpOrder.fixedorgmoney = @"";
@@ -109,18 +111,21 @@
     receipt5.ctype = @"1";
     receipt5.type = @"alipay";
     
+    //必要条件不全
     wpOrder.receiptArray = @[receipt1,receipt2,receipt3,receipt4,receipt5];
     [self.WhaleVC createPayment:wpOrder viewController:self.VC withCompletion:^(NSDictionary *result) {
         
     }];
     
     
+    //必要条件全面
     wpOrder.receiptArray = @[receipt1,receipt2,receipt3,receipt4,receipt5];
     wpOrder.orderno = @"123123123";
     [self.WhaleVC createPayment:wpOrder viewController:self.VC withCompletion:^(NSDictionary *result) {
         
     }];
     
+    //注册ID失败
     [self.WhaleVC setAppId:@{
                              @"appsecret" : @"NmU7hSSADNN9rKB0AwLbi9K9GyIW2K2f",
                              @"wxAppid" : WECHAT_PAY_KEY,
@@ -132,6 +137,7 @@
         
     }];
     
+    //注册ID成功  只有1个收款通道
     [self.WhaleVC setAppId:@{
                              @"appkey" : @"5ew28qukblY8r6n9P3BG",
                              @"appsecret" : @"NmU7hSSADNN9rKB0AwLbi9K9GyIW2K2f",
@@ -144,32 +150,46 @@
         
     }];
     
+    //只有1个收款通道
     wpOrder.receiptArray = @[receipt2];
     [self.WhaleVC createPayment:wpOrder viewController:self.VC withCompletion:^(NSDictionary *result) {
         
     }];
     
+    //只有1个收款通道
     wpOrder.receiptArray = @[receipt5];
     [self.WhaleVC createPayment:wpOrder viewController:self.VC withCompletion:^(NSDictionary *result) {
         
     }];
-    
-    wpOrder.receiptArray = @[receipt5];
-    [self.WhaleVC createPayment:wpOrder viewController:self.VC withCompletion:^(NSDictionary *result) {
-        
-    }];
-    
+   
+    //没有支持的付款通道
     wpOrder.payTypeArray = @[];
     [self.WhaleVC createPayment:wpOrder viewController:self.VC withCompletion:^(NSDictionary *result) {
         
     }];
     
+    //没有支持的收款通道
+    wpOrder.payTypeArray = @[@(1),@(25),@(2),@(4),@(31),@(25),@(26)];
     wpOrder.receiptArray = @[];
     [self.WhaleVC createPayment:wpOrder viewController:self.VC withCompletion:^(NSDictionary *result) {
         
     }];
-
+    
+    
+    //必要条件全面
+    wpOrder.receiptArray = @[receipt1,receipt2,receipt3,receipt4,receipt5];
+    wpOrder.orderno = @"123123123";
+    wpOrder.payTypeArray = @[@(1),@(25),@(2),@(4),@(31),@(25),@(26)];
+    [self.WhaleVC createPayment:wpOrder viewController:self.VC withCompletion:^(NSDictionary *result) {
+        
+    }];
 }
 
+
+- (void)testGetPreparePayOrderPayWay{
+
+    
+    [self.WhaleVC getPreparePayOrderPayWay];
+}
 
 @end
