@@ -9,13 +9,14 @@
 #import <XCTest/XCTest.h>
 #import "WhalePayViewController.h"
 #import <OCMock/OCMock.h>
+#import "ViewController.h"
 
 #define WECHAT_PAY_KEY @"wx42967af88ec99501"
 #define ALI_PAY_SCHEMEL @"AliPay20170313"
 
 @interface WhalePaySDKTests : XCTestCase
-@property (strong, nonatomic) WhalePayViewController *VC;//
-
+@property (strong, nonatomic) WhalePayViewController *WhaleVC;//
+@property (strong, nonatomic) ViewController *VC;//
 @end
 
 @interface WhalePayViewController (WhaleTest)
@@ -26,13 +27,14 @@
 
 - (void)setUp {
     [super setUp];
-    self.VC = [WhalePayViewController sharedInstance];
-    
+    self.WhaleVC = [WhalePayViewController sharedInstance];
+    self.VC = [ViewController sharedInstance];
     
 }
 
 - (void)tearDown {
     
+    self.WhaleVC = nil;
     self.VC = nil;
     
     [super tearDown];
@@ -51,23 +53,14 @@
 }
 
 - (void)testSetAppId{
-    
-    [self.VC setAppId:@{
+    NSTimeInterval start = CACurrentMediaTime();
+    [self.WhaleVC setAppId:@{
                         @"appkey" : @"5ew28qukblY8r6n9P3BG",
                         @"appsecret" : @"NmU7hSSADNN9rKB0AwLbi9K9GyIW2K2f",
                         @"wxAppid" : WECHAT_PAY_KEY,
                         @"aliSchemel" : ALI_PAY_SCHEMEL
                         }];
-    
-    id mockClass = OCMClassMock([WPOrder class]);
-    
-    
-    
-    [self.VC createPayment:mockClass viewController:nil withCompletion:^(NSDictionary *result) {
-        
-    }];
-    
-    
+    NSLog(@"----------%lf",CACurrentMediaTime() - start);
 }
 
 

@@ -57,6 +57,7 @@
 		B1C9CD481E67F862001F4035 /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B1C9CD461E67F862001F4035 /* libcrypto.a */; };
 		B1C9CD491E67F862001F4035 /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B1C9CD471E67F862001F4035 /* libssl.a */; };
 		B1C9CD4B1E67F86A001F4035 /* libLHQPayCSH.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B1C9CD4A1E67F86A001F4035 /* libLHQPayCSH.a */; };
+		B1FEE23D1E8CB18800B58E28 /* WhaleCreateTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B1FEE23C1E8CB18800B58E28 /* WhaleCreateTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -237,6 +238,7 @@
 		B1C9CD461E67F862001F4035 /* libcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libcrypto.a; sourceTree = "<group>"; };
 		B1C9CD471E67F862001F4035 /* libssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libssl.a; sourceTree = "<group>"; };
 		B1C9CD4A1E67F86A001F4035 /* libLHQPayCSH.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libLHQPayCSH.a; sourceTree = "<group>"; };
+		B1FEE23C1E8CB18800B58E28 /* WhaleCreateTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WhaleCreateTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -428,6 +430,7 @@
 			isa = PBXGroup;
 			children = (
 				B1C9CCB51E67F7C1001F4035 /* WhalePaySDKTests.m */,
+				B1FEE23C1E8CB18800B58E28 /* WhaleCreateTests.m */,
 				B1C9CCB71E67F7C1001F4035 /* Info.plist */,
 			);
 			path = WhalePaySDKTests;
@@ -669,7 +672,7 @@
 				TargetAttributes = {
 					B1C9CC971E67F7C1001F4035 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = NBHLFYA79A;
+						DevelopmentTeam = ZW9XLD4957;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Keychain = {
@@ -776,6 +779,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B1C9CCB61E67F7C1001F4035 /* WhalePaySDKTests.m in Sources */,
+				B1FEE23D1E8CB18800B58E28 /* WhaleCreateTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -918,7 +922,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = WhalePaySDK/WhalePaySDK.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = ZW9XLD4957;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -931,6 +935,7 @@
 					"$(PROJECT_DIR)/WhalePaySDK/WeiXin",
 				);
 				INFOPLIST_FILE = WhalePaySDK/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -956,7 +961,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = WhalePaySDK/WhalePaySDK.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = ZW9XLD4957;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -969,6 +974,7 @@
 					"$(PROJECT_DIR)/WhalePaySDK/WeiXin",
 				);
 				INFOPLIST_FILE = WhalePaySDK/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",

@@ -262,7 +262,6 @@
  @param completion 支付结果回调 Block
  */
 - (void)createPayment:(WPOrder *)wpOrder viewController:(UIViewController *)viewController withCompletion:(AKPayCompletion)completion{
-    
     //1.检测是否注册成功
     if ([self.appkey isNotNull] && [self.appsecret isNotNull]){
         //2.检测必要条件

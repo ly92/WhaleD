@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-#import "WhalePayViewController.h"
+
 #import "MBProgressHUD.h"
 
 @interface ViewController ()
@@ -15,6 +15,11 @@
 @end
 
 @implementation ViewController
+
+
+//单例
+@def_singleton(ViewController);
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];

@@ -7,9 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "WhalePayViewController.h"
+
 
 @interface ViewController : UIViewController
 
+//单例
+@singleton( ViewController );
 
 @end
 
