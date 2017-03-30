@@ -51,6 +51,7 @@
 }
 
 - (void)testSetAppId{
+
     NSTimeInterval start = CACurrentMediaTime();
     [self.WhaleVC setAppId:@{
                         @"appkey" : @"5ew28qukblY8r6n9P3BG",
