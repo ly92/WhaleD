@@ -35,7 +35,27 @@
 - (void)testExample {
     [[[XCUIApplication alloc] init].buttons[@"邻花钱"] tap];
     
-    
+}
+
+- (void)testWeixin{
+    XCUIApplication *app = [[XCUIApplication alloc] init];
+    [app.buttons[@"全部默认"] tap];
+    [app.tables.staticTexts[@"彩之云微信支付（正式）"] tap];
+    [app.buttons[@"立即支付"] tap];
+}
+
+- (void)testAli{
+    XCUIApplication *app = [[XCUIApplication alloc] init];
+    [app.buttons[@"全部默认"] tap];
+    [app.tables.staticTexts[@"彩之云支付宝（正式）"] tap];
+    [app.buttons[@"立即支付"] tap];
+}
+
+- (void)testBack{
+    XCUIApplication *app = [[XCUIApplication alloc] init];
+    [app.buttons[@"全部默认"] tap];
+    [app.tables.staticTexts[@"彩之云支付宝（正式）"] tap];
+    [[app.navigationBars[@"支付"] childrenMatchingType:XCUIElementTypeButton].element tap];
 }
 
 @end

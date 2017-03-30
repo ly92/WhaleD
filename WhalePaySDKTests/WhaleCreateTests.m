@@ -186,10 +186,4 @@
 }
 
 
-- (void)testGetPreparePayOrderPayWay{
-
-    
-    [self.WhaleVC getPreparePayOrderPayWay];
-}
-
 @end
