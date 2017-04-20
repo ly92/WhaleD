@@ -672,7 +672,7 @@
 				TargetAttributes = {
 					B1C9CC971E67F7C1001F4035 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = ZW9XLD4957;
+						DevelopmentTeam = NBHLFYA79A;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Keychain = {
@@ -922,7 +922,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = WhalePaySDK/WhalePaySDK.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = ZW9XLD4957;
+				DEVELOPMENT_TEAM = NBHLFYA79A;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -961,7 +961,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = WhalePaySDK/WhalePaySDK.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = ZW9XLD4957;
+				DEVELOPMENT_TEAM = NBHLFYA79A;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",

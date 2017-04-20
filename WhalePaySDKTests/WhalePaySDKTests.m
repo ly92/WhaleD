@@ -19,7 +19,10 @@
 @property (strong, nonatomic) ViewController *VC;//
 @end
 
+@interface WhalePayViewController (WhalePaySDKTests)
+- (void)isLocalTokenCanUse;
 
+@end
 
 @implementation WhalePaySDKTests
 
@@ -39,8 +42,27 @@
 }
 
 - (void)testExample {
-    // This is an example of a functional test case.
-    // Use XCTAssert and related functions to verify your tests produce the correct results.
+//    id mockClass = OCMClassMock([WhalePayViewController class]);
+//    
+//    OCMVerify([mockClass isLocalTokenCanUse]);
+    
+    id mockClass = OCMClassMock([WhalePayViewController class]);
+    
+    OCMStub([mockClass setAppId:[OCMArg checkWithBlock:^BOOL(id dict) {
+        
+        return [dict isKindOfClass:[NSDictionary class]];
+        
+    }]]);
+    
+    [mockClass setAppId:@{
+                             @"appkey" : @"5ew28qukblY8r6n9P3BG",
+                             @"appsecret" : @"NmU7hSSADNN9rKB0AwLbi9K9GyIW2K2f",
+                             @"wxAppid" : WECHAT_PAY_KEY,
+                             @"aliSchemel" : ALI_PAY_SCHEMEL
+                             }];
+    
+    
+    
 }
 
 - (void)testPerformanceExample {
@@ -60,6 +82,8 @@
                         @"aliSchemel" : ALI_PAY_SCHEMEL
                         }];
     NSLog(@"----------%lf",CACurrentMediaTime() - start);
+    
+    
 }
 
 
