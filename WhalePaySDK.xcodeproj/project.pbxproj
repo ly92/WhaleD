@@ -57,6 +57,12 @@
 		B1C9CD481E67F862001F4035 /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B1C9CD461E67F862001F4035 /* libcrypto.a */; };
 		B1C9CD491E67F862001F4035 /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B1C9CD471E67F862001F4035 /* libssl.a */; };
 		B1C9CD4B1E67F86A001F4035 /* libLHQPayCSH.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B1C9CD4A1E67F86A001F4035 /* libLHQPayCSH.a */; };
+		B1FD8A721EA8516400C9731B /* WhalePayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B1FD8A711EA8516300C9731B /* WhalePayViewController.xib */; };
+		B1FD8A731EA8516400C9731B /* WhalePayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B1FD8A711EA8516300C9731B /* WhalePayViewController.xib */; };
+		B1FD8A771EA85D0F00C9731B /* WhalePayWayCell2.m in Sources */ = {isa = PBXBuildFile; fileRef = B1FD8A751EA85D0F00C9731B /* WhalePayWayCell2.m */; };
+		B1FD8A781EA85D0F00C9731B /* WhalePayWayCell2.m in Sources */ = {isa = PBXBuildFile; fileRef = B1FD8A751EA85D0F00C9731B /* WhalePayWayCell2.m */; };
+		B1FD8A791EA85D0F00C9731B /* WhalePayWayCell2.xib in Resources */ = {isa = PBXBuildFile; fileRef = B1FD8A761EA85D0F00C9731B /* WhalePayWayCell2.xib */; };
+		B1FD8A7A1EA85D0F00C9731B /* WhalePayWayCell2.xib in Resources */ = {isa = PBXBuildFile; fileRef = B1FD8A761EA85D0F00C9731B /* WhalePayWayCell2.xib */; };
 		B1FEE23D1E8CB18800B58E28 /* WhaleCreateTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B1FEE23C1E8CB18800B58E28 /* WhaleCreateTests.m */; };
 /* End PBXBuildFile section */
 
@@ -238,6 +244,10 @@
 		B1C9CD461E67F862001F4035 /* libcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libcrypto.a; sourceTree = "<group>"; };
 		B1C9CD471E67F862001F4035 /* libssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libssl.a; sourceTree = "<group>"; };
 		B1C9CD4A1E67F86A001F4035 /* libLHQPayCSH.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libLHQPayCSH.a; sourceTree = "<group>"; };
+		B1FD8A711EA8516300C9731B /* WhalePayViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WhalePayViewController.xib; sourceTree = "<group>"; };
+		B1FD8A741EA85D0F00C9731B /* WhalePayWayCell2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WhalePayWayCell2.h; sourceTree = "<group>"; };
+		B1FD8A751EA85D0F00C9731B /* WhalePayWayCell2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WhalePayWayCell2.m; sourceTree = "<group>"; };
+		B1FD8A761EA85D0F00C9731B /* WhalePayWayCell2.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WhalePayWayCell2.xib; sourceTree = "<group>"; };
 		B1FEE23C1E8CB18800B58E28 /* WhaleCreateTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WhaleCreateTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -411,9 +421,13 @@
 				B1C9CC9B1E67F7C1001F4035 /* Supporting Files */,
 				B111A2541E67FA0C0081A3A5 /* WhalePayViewController.h */,
 				B111A2551E67FA0C0081A3A5 /* WhalePayViewController.m */,
+				B1FD8A711EA8516300C9731B /* WhalePayViewController.xib */,
 				083F88771E6B0AD1000739A5 /* WhalePayWayCell.h */,
 				083F88781E6B0AD1000739A5 /* WhalePayWayCell.m */,
 				083F88791E6B0AD1000739A5 /* WhalePayWayCell.xib */,
+				B1FD8A741EA85D0F00C9731B /* WhalePayWayCell2.h */,
+				B1FD8A751EA85D0F00C9731B /* WhalePayWayCell2.m */,
+				B1FD8A761EA85D0F00C9731B /* WhalePayWayCell2.xib */,
 			);
 			path = WhalePaySDK;
 			sourceTree = "<group>";
@@ -724,8 +738,10 @@
 				B128DB9D1E76354700399F25 /* AlipaySDK.bundle in Resources */,
 				B1C9CCA61E67F7C1001F4035 /* Main.storyboard in Resources */,
 				083F887B1E6B0AD1000739A5 /* WhalePayWayCell.xib in Resources */,
+				B1FD8A721EA8516400C9731B /* WhalePayViewController.xib in Resources */,
 				B1B5520D1E72A417008FABEC /* README.txt in Resources */,
 				B1C9CD381E67F84E001F4035 /* WhaleResources.bundle in Resources */,
+				B1FD8A791EA85D0F00C9731B /* WhalePayWayCell2.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -733,6 +749,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B1FD8A731EA8516400C9731B /* WhalePayViewController.xib in Resources */,
+				B1FD8A7A1EA85D0F00C9731B /* WhalePayWayCell2.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -761,6 +779,7 @@
 				B1C9CCA01E67F7C1001F4035 /* AppDelegate.m in Sources */,
 				B1C9CD3B1E67F84E001F4035 /* DataSigner.m in Sources */,
 				B1C9CD401E67F84E001F4035 /* RSADataSigner.m in Sources */,
+				B1FD8A771EA85D0F00C9731B /* WhalePayWayCell2.m in Sources */,
 				B111A2561E67FA0C0081A3A5 /* WhalePayViewController.m in Sources */,
 				B1C9CD3F1E67F84E001F4035 /* openssl_wrapper.m in Sources */,
 				B1C9CD3A1E67F84E001F4035 /* Base64Data.m in Sources */,
@@ -779,6 +798,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B1C9CCB61E67F7C1001F4035 /* WhalePaySDKTests.m in Sources */,
+				B1FD8A781EA85D0F00C9731B /* WhalePayWayCell2.m in Sources */,
 				B1FEE23D1E8CB18800B58E28 /* WhaleCreateTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

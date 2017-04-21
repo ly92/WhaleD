@@ -12,7 +12,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *iconImgV;
 @property (weak, nonatomic) IBOutlet UILabel *nameLbl;
 @property (weak, nonatomic) IBOutlet UILabel *moneyLbl;
+@property (weak, nonatomic) IBOutlet UITextField *moneyTf;
 @property (weak, nonatomic) IBOutlet UILabel *infoLbl;
-@property (weak, nonatomic) IBOutlet UIButton *selectedBtn;
 
 @end
